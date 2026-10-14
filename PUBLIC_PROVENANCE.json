@@ -208,6 +208,10 @@
     {
       "path": ".github/workflows/release.yml",
       "sha256": "19da4ac2d33c1e353e8396158d8618e62d7f062afc26e7a3bf100a56bae532d3"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "fd4421dff14eb6ed04589253e31b71c9e0c3939bf852494028be28ea61712b39"
     }
   ]
 }

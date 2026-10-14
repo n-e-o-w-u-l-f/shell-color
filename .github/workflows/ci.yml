@@ -1,0 +1,29 @@
+name: Public Shell-Color CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: sudo apt-get update && sudo apt-get install -y shellcheck ripgrep
+      - name: Linux and BSD shell regression checks
+        run: make test-linux test-bsd lint
+      - name: BSD tarball smoke test
+        run: sh scripts/build-bsd-tarballs.sh
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Windows PowerShell 5.1
+        shell: powershell
+        run: ./ci/windows.ps1
+      - name: PowerShell 7+
+        shell: pwsh
+        run: ./ci/windows.ps1
