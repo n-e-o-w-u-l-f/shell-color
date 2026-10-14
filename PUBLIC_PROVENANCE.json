@@ -1,0 +1,213 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "VERSION",
+      "sha256": "d8203a82bfb1ad3ecd10d19c8d53ab60a0ab3994ff3e7cbd5720ca56faa17634"
+    },
+    {
+      "path": "LICENCE.md",
+      "sha256": "72591ce87e35b6abd0fef7030f4606570e7c38ba8a3f4558789d8cf76e22a3e0"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "4a7870be11049c4c64de9304392246473255d53cecfb8bbb772760cd5361b1a7"
+    },
+    {
+      "path": "bin/shell-color",
+      "sha256": "cb55d5fcef3995cc70c5f6dc7c0e00169271a7e1a5321358484f610401fe49ab"
+    },
+    {
+      "path": "bin/shell-color-netbsd",
+      "sha256": "1ecae8238d6b1aea2d6a0cfec436040711c05ab2319403b1e3d5f39490cbf287"
+    },
+    {
+      "path": "bin/shell-color-freebsd",
+      "sha256": "8f5a89d61f3bf848d06ee3547b174a47d22a6e354669486f7c40987d89ad2e47"
+    },
+    {
+      "path": "src/shell-color.sh",
+      "sha256": "84f41ecbef6b9b5dd46706bf7630a9008f7b716607defe7409ec79cd1110ad24"
+    },
+    {
+      "path": "src/shell-color-netbsd.sh",
+      "sha256": "ec24e4904950fd2c5442155c6abbae21fb79f4562cda448222ecb08a525334a5"
+    },
+    {
+      "path": "src/shell-color-freebsd.sh",
+      "sha256": "ce9effa430ec850972383cf7fdffde8899b58890e1622586eeab5546148fffcb"
+    },
+    {
+      "path": "install/install.sh",
+      "sha256": "0f16cd2f33489cc894273353a18dba09f1fc6e5a6ebd732c5fb9ef7927471414"
+    },
+    {
+      "path": "install/uninstall.sh",
+      "sha256": "3de2c13a81957046c350fe94ef3e6e0e8f2de1e81b16f52329084c4b6f05c630"
+    },
+    {
+      "path": "install/install-netbsd.sh",
+      "sha256": "779cf33daf8c2102e4ab1b7021a9313edee45a7e217021e0dfe2938d94204725"
+    },
+    {
+      "path": "install/install-freebsd.sh",
+      "sha256": "9767d03ff41b3b326bead9ad6898db241bb00fab749814c85489404d4f367c68"
+    },
+    {
+      "path": "profile.d/shell-color.sh",
+      "sha256": "93ad07f30e3420af08efcb071a875b79fcbadc5a0ba3a5abbd74b0a0f7e62f40"
+    },
+    {
+      "path": "docs/COMMAND_REFERENCE.md",
+      "sha256": "7993b1c3f780a459a9f4f26a5bf666165b32dea79b2af7b279b1d7c90c8a7385"
+    },
+    {
+      "path": "docs/PACKAGING.md",
+      "sha256": "c4d2dd7e6854b6ba1d2d25c70697d8a8530aecdc2f6700fb9020e59030289d3c"
+    },
+    {
+      "path": "docs/WINDOWS.md",
+      "sha256": "41e390208193baebe92a781e4cd2fb4d45db2126ee7d1c7cf6242eb2711a47b9"
+    },
+    {
+      "path": "docs/NETBSD.md",
+      "sha256": "c11c24fa93af9b6bcb69fb050e8c2c7fd0cdf13781cd3bb3fa988e7ecb1d7625"
+    },
+    {
+      "path": "docs/FREEBSD.md",
+      "sha256": "a8bdf11aebaa04e856a89099827beed4974166faf3b83249db8ece9c376ec747"
+    },
+    {
+      "path": "ci/linux.sh",
+      "sha256": "d88a1a10bfa410b40dae9a5a73d972b0bc65f0fc92221ed719a276f06099a83f"
+    },
+    {
+      "path": "ci/windows.ps1",
+      "sha256": "7a11fca976f4980005771c66d253d92f154e6dc755dd98e5600f782405d82cdd"
+    },
+    {
+      "path": "tests/test-linux.sh",
+      "sha256": "36c2fce3b7cf48be4c4549161a22f514bc0d36beb29a6b3d4acf1aaf96723760"
+    },
+    {
+      "path": "tests/test-links.sh",
+      "sha256": "550fe21465a14c109b9be6464a795ef9f0379a82996f91d80e9e937db3cea027"
+    },
+    {
+      "path": "tests/test-windows.ps1",
+      "sha256": "210847a2caef611eb578d9a4aa6cc4b6770b298c601d33dc90776c88c14ca788"
+    },
+    {
+      "path": "tests/test-netbsd.sh",
+      "sha256": "f935199fa0a02cb99a528d917fe85da48ffb3a29731a023eee658ab14ee7abde"
+    },
+    {
+      "path": "tests/test-freebsd.sh",
+      "sha256": "68ec2e7925e3da4da31d937660ff666d376ff2f4be323bccf6dd16524cca5618"
+    },
+    {
+      "path": "packaging/alpine/APKBUILD",
+      "sha256": "e2a558a1437a14d0c2599678b11403acb6bfa785d47f1eb7e3adbb6bb3ad0fe3"
+    },
+    {
+      "path": "packaging/arch/PKGBUILD",
+      "sha256": "4f047f1cfd6752643c0b96d01920737316ec81d58a843854cca9d87b0901eb71"
+    },
+    {
+      "path": "packaging/debian/control",
+      "sha256": "00567a1288de511b045aa4156046d96dc09ba02f1af449943696e71219b22cb5"
+    },
+    {
+      "path": "packaging/gentoo/shell-color-1.33.7a.ebuild",
+      "sha256": "7e8a25a016e0e666d9d8272140efabd90821efea48fd4c05645480a91a662f6b"
+    },
+    {
+      "path": "packaging/nix/module.nix",
+      "sha256": "12f571513fa620e855e5c5bf5335cdd3271be2f1e4fa916da991933fa9f9cf51"
+    },
+    {
+      "path": "packaging/rpm/shell-color.spec",
+      "sha256": "465564f4a3292f2d0b452e9796ba40da1d287f9716af18cf127bdc9eab6a8d3e"
+    },
+    {
+      "path": "packaging/void/template",
+      "sha256": "1ebd0cf97f12f411dd09d9163730949ea1a56271a39be6fe67af51397845eabe"
+    },
+    {
+      "path": "scripts/build-arch.sh",
+      "sha256": "8dd9c6cfdcd76293fc3b5a2b9cf16306192e3183972fed93ac122655e260d7b7"
+    },
+    {
+      "path": "scripts/build-deb.sh",
+      "sha256": "dcbcc3ced37ba7d5ffeffdab27f70fabf60759c9b17920c3e61b19b7d36aa845"
+    },
+    {
+      "path": "scripts/build-rpm.sh",
+      "sha256": "55173b53f40fc66ad7cb23e94d789021a8f9e939a3fe84391417d025919187ab"
+    },
+    {
+      "path": "scripts/build-packages.sh",
+      "sha256": "78e0af59afe0b8658b598498c33c168f78b0e778d701c48e5e2bb703bf8d7e59"
+    },
+    {
+      "path": "scripts/build-tarball.sh",
+      "sha256": "513e73a2036babc1557b5cac3dea831764df1c0240bf750be35b7289659d5653"
+    },
+    {
+      "path": "scripts/build-bsd-tarballs.sh",
+      "sha256": "6e2f54d09d14e6ef0f3b29de6ddbed2d28a1ca0adfde0bda40e9dd67d01ee827"
+    },
+    {
+      "path": "windows/ShellColor/ShellColor.psd1",
+      "sha256": "0945e92216445425fb6ccf7ee907b4fba9a2db8201418d942a8fd65feaa781cb"
+    },
+    {
+      "path": "windows/ShellColor/ShellColor.psm1",
+      "sha256": "664b8e3b1d5bc8fbff9f0cfd19c2e0607452183dd15491b87f42df0cb04b62b9"
+    },
+    {
+      "path": "windows/cmd/Build-CmdPrompt.ps1",
+      "sha256": "a35069ee23d0eb3117ff5cd554ac0f1a33410a474fe43b03f8bae93c425072b4"
+    },
+    {
+      "path": "windows/cmd/ShellColor.CmdBridge.ps1",
+      "sha256": "d65d59ad6d079d542f1dd5cc487e8bcafea6ca20186d1fea4a530104f207512c"
+    },
+    {
+      "path": "windows/cmd/shell-color.cmd",
+      "sha256": "071bfe8ea061bb4e9f3535e8b155ef05f70256e4054396b83d73c1ecba0b9555"
+    },
+    {
+      "path": "windows/install.cmd",
+      "sha256": "653dad06c500325a74f09499af4a56f9c9242ed74daa48c0232e812c78c25ba6"
+    },
+    {
+      "path": "windows/install.ps1",
+      "sha256": "513b210ed6d31e4bdf15763466a015b4630b4e7fe5ac52843ecf007118aa3759"
+    },
+    {
+      "path": "windows/uninstall.cmd",
+      "sha256": "ec01071ea6be87b16e0ad2d5faaf1ecfd9a73f57f1eb50ccd4c4ce7003c32c86"
+    },
+    {
+      "path": "windows/uninstall.ps1",
+      "sha256": "77dfac22ea25a705f0a93c072e534821ded5adea2f8b3ff95de098159e5ce9ee"
+    },
+    {
+      "path": "flake.nix",
+      "sha256": "2e4e2c9a21e3d9163fc59533679ada88191b205be32249a66ea5205c26215d5d"
+    },
+    {
+      "path": "install/repair-shell-color-bash.sh",
+      "sha256": "9e0b635718f67176664fbdae4755dbeb9d89d1974006f41c4a62f18bf1eb1bf9"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7ae62ada592b55cb64ae832e1dfb7c0f8940595ec02265aea55da25800464290"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "19da4ac2d33c1e353e8396158d8618e62d7f062afc26e7a3bf100a56bae532d3"
+    }
+  ]
+}

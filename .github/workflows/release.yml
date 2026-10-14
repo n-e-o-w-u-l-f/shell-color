@@ -1,0 +1,27 @@
+name: Shell-Color public releases
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        run: sudo apt-get update && sudo apt-get install -y rpm zstd zip shellcheck ripgrep
+      - name: Verify tag
+        run: test "$(echo "$GITHUB_REF_NAME" | sed s/^v//)" = "$(cat VERSION)"
+      - name: Validate Linux, NetBSD and FreeBSD adapters
+        run: make test-linux test-bsd lint
+      - name: Linux and BSD distributions
+        run: make tarball deb rpm arch && sh scripts/build-bsd-tarballs.sh
+      - name: Windows ZIP
+        run: zip -qr "dist/shell-color-$(cat VERSION)-windows.zip" windows README.md LICENCE.md VERSION
+      - name: Checksums
+        run: cd dist && sha256sum * > SHA256SUMS
+      - name: Publish public GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --verify-tag --generate-notes

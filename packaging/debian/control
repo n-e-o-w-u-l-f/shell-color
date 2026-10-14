@@ -1,0 +1,11 @@
+Package: shell-color
+Version: @VERSION@
+Section: shells
+Priority: optional
+Architecture: @ARCH@
+Depends: bash (>= 4.0)
+Maintainer: Neowulf <megalod0n@live.de>
+Homepage: https://github.com/n-e-o-w-u-l-f/shell-color
+Description: Customizable xterm-256 Bash prompt colors
+ shell-color colors Bash prompts, paths, numbers, links and selected command
+ output without wrapping privileged or interactive system commands.

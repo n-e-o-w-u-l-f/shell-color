@@ -1,0 +1,19 @@
+pkgname=shell-color
+pkgver=1.33.7a
+pkgrel=0
+pkgdesc="Customizable xterm-256 Bash prompt colors"
+url="https://github.com/n-e-o-w-u-l-f/shell-color"
+arch="noarch"
+license="MIT"
+depends="bash"
+source="$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz"
+options="!check"
+
+package() {
+  cd "$builddir"
+  install -Dm755 bin/shell-color "$pkgdir/usr/bin/shell-color"
+  install -Dm644 src/shell-color.sh "$pkgdir/usr/share/shell-color/shell-color.sh"
+  install -Dm644 profile.d/shell-color.sh "$pkgdir/etc/profile.d/shell-color.sh"
+}
+
+sha512sums="SKIP"

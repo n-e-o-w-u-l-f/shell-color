@@ -1,0 +1,37 @@
+#!/bin/sh
+# Native NetBSD /bin/sh user CLI. Does not mutate this shell's PS1 from a child.
+set -eu
+dir=${SHELL_COLOR_CONFIG_DIR:-"$HOME/.config/shell-color"}
+usage () {
+  printf '%s\n' 'shell-color-netbsd --set 0..255 | --style compact|brackets|arrow|keep | --current | --help'
+}
+store () {
+  mkdir -p "$dir"
+  file=$dir/$1
+  tmp="$file.$$"
+  (umask 077; printf '%s\n' "$2" > "$tmp") || exit 1
+  mv -f "$tmp" "$file"
+}
+case ${1:---current} in
+  --set)
+    [ "$#" -eq 2 ] || { usage >&2; exit 2; }
+    case $2 in ''|*[!0-9]*) usage >&2; exit 2 ;; esac
+    [ "$2" -le 255 ] || { usage >&2; exit 2; }
+    store color "$2"
+    printf 'NetBSD accent index: %s (new prompt on next shell render)\n' "$2"
+    ;;
+  --style)
+    [ "$#" -eq 2 ] || { usage >&2; exit 2; }
+    case $2 in compact|brackets|arrow|keep) ;; *) usage >&2; exit 2 ;; esac
+    store ps1_style "$2"
+    printf 'NetBSD prompt style: %s (new prompt on next shell render)\n' "$2"
+    ;;
+  --current)
+    index=85; style=compact
+    [ -r "$dir/color" ] && { IFS= read -r index < "$dir/color" || :; }
+    [ -r "$dir/ps1_style" ] && { IFS= read -r style < "$dir/ps1_style" || :; }
+    printf 'NetBSD prompt: color=%s style=%s\n' "$index" "$style"
+    ;;
+  --help|-h) usage ;;
+  *) usage >&2; exit 2 ;;
+esac

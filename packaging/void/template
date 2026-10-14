@@ -1,0 +1,17 @@
+pkgname=shell-color
+version=1.33.7a
+revision=1
+depends="bash"
+short_desc="Customizable xterm-256 Bash prompt colors"
+maintainer="Neowulf <megalod0n@live.de>"
+license="MIT"
+homepage="https://github.com/n-e-o-w-u-l-f/shell-color"
+distfiles="https://github.com/n-e-o-w-u-l-f/shell-color/archive/refs/tags/v${version}.tar.gz"
+checksum=SKIP
+
+do_install() {
+  vbin bin/shell-color
+  vinstall src/shell-color.sh 644 usr/share/shell-color
+  vinstall profile.d/shell-color.sh 644 etc/profile.d
+  vlicense LICENCE.md
+}

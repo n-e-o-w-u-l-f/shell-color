@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o nounset
+set -o pipefail
+
+find_runtime() {
+  local script_dir candidate
+  script_dir="$(CDPATH='' cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
+  for candidate in \
+    "${SHELL_COLOR_RUNTIME:-}" \
+    "$script_dir/../src/shell-color.sh" \
+    "$script_dir/../share/shell-color/shell-color.sh" \
+    "$HOME/.local/share/shell-color/shell-color.sh" \
+    "/usr/local/share/shell-color/shell-color.sh" \
+    "/usr/share/shell-color/shell-color.sh"
+  do
+    if [[ -n "$candidate" && -r "$candidate" ]]; then
+      printf '%s\n' "$candidate"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+runtime="$(find_runtime)" || {
+  printf 'shell-color: runtime not found; reinstall shell-color.\n' >&2
+  exit 1
+}
+
+export SHELL_COLOR_FORCE_LOAD=1
+# shellcheck source=/dev/null
+source "$runtime"
+shell-color "$@"
