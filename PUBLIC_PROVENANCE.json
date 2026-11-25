@@ -135,7 +135,7 @@
     },
     {
       "path": "scripts/build-arch.sh",
-      "sha256": "8dd9c6cfdcd76293fc3b5a2b9cf16306192e3183972fed93ac122655e260d7b7"
+      "sha256": "d971b4967e0572882940839478d24179790356d5d92c0fd7f14892511db76d42"
     },
     {
       "path": "scripts/build-deb.sh",

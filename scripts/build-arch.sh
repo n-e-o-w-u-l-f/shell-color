@@ -29,7 +29,9 @@ arch = $ARCH
 license = MIT
 depend = bash
 EOF
-tar -C "$STAGE" --sort=name --owner=0 --group=0 -cf - . | zstd -19 -T0 -o "$OUTPUT"
-tar -C "$STAGE" --sort=name --owner=0 --group=0 -czf "$GZIP_OUTPUT" .
+# libalpm looks for .PKGINFO at the archive root without a ./ prefix.
+members=(.PKGINFO etc usr)
+tar -C "$STAGE" --sort=name --owner=0 --group=0 -cf - "${members[@]}" | zstd -19 -T0 -o "$OUTPUT"
+tar -C "$STAGE" --sort=name --owner=0 --group=0 -czf "$GZIP_OUTPUT" "${members[@]}"
 printf '%s\n' "$OUTPUT"
 printf '%s\n' "$GZIP_OUTPUT"
