@@ -8,7 +8,9 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
       - name: Dependencies
         run: sudo apt-get update && sudo apt-get install -y rpm zstd zip shellcheck ripgrep
       - name: Verify tag
@@ -20,7 +22,15 @@ jobs:
       - name: Windows ZIP
         run: zip -qr "dist/shell-color-$(cat VERSION)-windows.zip" windows docs Readme.md LICENCE.md VERSION
       - name: Checksums
-        run: cd dist && sha256sum * > SHA256SUMS
+        run: |
+          cd dist
+          for artifact in *; do
+            if [ "$artifact" != SHA256SUMS ]; then
+              sha256sum -- "$artifact"
+            fi
+          done > ../SHA256SUMS
+          test -s ../SHA256SUMS
+          mv -- ../SHA256SUMS SHA256SUMS
       - name: Publish public GitHub release
         env:
           GH_TOKEN: ${{ github.token }}

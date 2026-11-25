@@ -207,11 +207,11 @@
     },
     {
       "path": ".github/workflows/release.yml",
-      "sha256": "6f5dccb4d53c86ba7246f39c8454ccbf877bbe057e3a3a1e4d0a6e5efd3565f1"
+      "sha256": "8e95d4b2e18ef96a1beb050b482a2efc08e107dbe005242a6db692fa680c49ad"
     },
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "fd4421dff14eb6ed04589253e31b71c9e0c3939bf852494028be28ea61712b39"
+      "sha256": "95570d6c421338ef2c1190394c9918cd5598dd1f7779217bf2feccd6abe75d20"
     },
     {
       "path": "docs/Readme.de.md",
