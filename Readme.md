@@ -1,5 +1,7 @@
 # Shell-Color
 
+[English](Readme.md) · [Deutsch](docs/Readme.de.md) · [Français](docs/Readme.fr.md) · [Español](docs/Readme.es.md) · [Русский](docs/Readme.ru.md) · [Polski](docs/Readme.pl.md)
+
 Open-source terminal prompt colour toolkit for **Linux, Windows, NetBSD and FreeBSD**. This public distribution is exported from a separate private development repository using an explicit allowlist, secret scanner and tests. It contains no private Git history or machine-specific configuration.
 
 ## Installation

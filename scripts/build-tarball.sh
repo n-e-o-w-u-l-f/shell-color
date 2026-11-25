@@ -11,8 +11,7 @@ mkdir -p "$STAGE_DIR"
 # Use only files physically present in the reviewed source tree. The public
 # export is intentionally narrower than the private development checkout.
 for item in bin ci docs install packaging profile.d scripts src tests windows \
-  README.md README.de.md README.fr.md README.es.md README.ru.md README.pl.md \
-  README.cn.md CHANGELOG.md CODE_OF_CONDUCT.md CONTRIBUTING.md \
+  Readme.md CHANGELOG.md CODE_OF_CONDUCT.md CONTRIBUTING.md \
   LICENCE.md SECURITY.md SUPPORT.md Makefile flake.nix VERSION
 do
   [ ! -e "$PROJECT_DIR/$item" ] || cp -R "$PROJECT_DIR/$item" "$STAGE_DIR/"

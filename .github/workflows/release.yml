@@ -18,7 +18,7 @@ jobs:
       - name: Linux and BSD distributions
         run: make tarball deb rpm arch && sh scripts/build-bsd-tarballs.sh
       - name: Windows ZIP
-        run: zip -qr "dist/shell-color-$(cat VERSION)-windows.zip" windows README.md LICENCE.md VERSION
+        run: zip -qr "dist/shell-color-$(cat VERSION)-windows.zip" windows docs Readme.md LICENCE.md VERSION
       - name: Checksums
         run: cd dist && sha256sum * > SHA256SUMS
       - name: Publish public GitHub release

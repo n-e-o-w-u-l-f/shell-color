@@ -1,7 +1,7 @@
 # Complete command reference
 
 This document is the precise reference for version `v1.33.7a`. Installation examples
-and platform overviews are in the [README](../README.md).
+and platform overviews are in the [README](../Readme.md).
 
 ## Linux function and CLI
 
